@@ -1,0 +1,92 @@
+/* Login.css */
+
+/* Container for the form */
+.login-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Form header */
+  .login-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-header h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  /* Form fields */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    color: #6c757d;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Form buttons */
+  .form-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .form-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .login-button {
+    background-color: #007bff;
+  }
+  
+  .cancel-button {
+    background-color: #dc3545;
+  }
+  
+  /* Toggle button for dark theme */
+  .theme-toggle-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+  /* Center the login form */
+.vh-100 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Make the input boxes smaller */
+  .form-control {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+  }
+  

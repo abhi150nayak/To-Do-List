@@ -1,0 +1,71 @@
+/* ToDo.css */
+
+/* Container for each task */
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Task table format */
+  .task-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .task-table th,
+  .task-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .task-table th {
+    text-align: left;
+  }
+  
+  /* Buttons */
+  li button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button.edit-button {
+    margin-left: 10px;
+    background-color: #194fa6;
+  }
+  
+  li button.remove-button {
+    margin-left: 2px;
+    background-color: #d3191c;
+  }
+  
+  li button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Logout button */
+  .logout-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .logout-button {
+    padding: 6px 12px;
+    background-color: #17ca1a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #28dd28;
+  }
+  

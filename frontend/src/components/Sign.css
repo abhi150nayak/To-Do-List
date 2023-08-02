@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+}
+
+.form-outline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.form-outline input {
+  width: 100%;
+}
+
+.form-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.d-flex.justify-content-center {
+  justify-content: center;
+}
+
+.text-center.text-muted {
+  text-align: center;
+  color: #6c757d;
+}
+
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #0062cc;
+  border-color: #005cbf;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-lg {
+  padding: 0.75rem 1.0rem;
+  font-size: 1.2rem;
+  line-height: 0.9;
+  border-radius: 0.3rem;
+}
+
+.gradient-custom-4 {
+  background: linear-gradient(to right, #82bcf6, #3bb7dc);
+}
+
+.text-body {
+  color: #212529;
+}
