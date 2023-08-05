@@ -13,12 +13,16 @@ const TodoList = () => {
 
   const handleInputChange = (e) => {
     setTask(e.target.value);
-    // setErrorMessage('');
+    setErrorMessage('');
   };
 
   const handleAddTask = () => {
     if (task.trim() !== '') {
-      setTasks([...tasks, task]);
+      const newTask = {
+        text: task,
+        date: new Date().toISOString(), // Store the current date in ISO format
+      };
+      setTasks([...tasks, newTask]);
       setTask('');
     } else {
       alert('Task field cannot be empty.');
@@ -32,13 +36,13 @@ const TodoList = () => {
 
   const handleEditTask = (index) => {
     setEditMode(true);
-    setEditedTask(tasks[index]);
+    setEditedTask(tasks[index].text);
     setEditIndex(index);
   };
 
   const handleSaveTask = () => {
     if (editedTask.trim() !== '') {
-      const updatedTasks = tasks.map((t, i) => (i === editIndex ? editedTask : t));
+      const updatedTasks = tasks.map((t, i) => (i === editIndex ? { ...t, text: editedTask } : t));
       setTasks(updatedTasks);
       setEditMode(false);
       setEditedTask('');
@@ -53,9 +57,7 @@ const TodoList = () => {
   };
 
   const handleLogout = () => {
-    // Implement your logout logic here.
-    // For example, clear local storage, remove tokens, etc.
-    // Then redirect to the login page using React Router's navigate function:
+    
     navigate('/login');
   };
 
@@ -95,13 +97,15 @@ const TodoList = () => {
         <thead>
           <tr>
             <th>Task</th>
+            <th>Date</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {tasks.map((task, index) => (
             <tr key={index}>
-              <td>{task}</td>
+              <td>{task.text}</td>
+              <td>{new Date(task.date).toLocaleString()}</td> {/* Display date in readable format */}
               <td>
                 <button className="edit-button" onClick={() => handleEditTask(index)}>
                   Edit
